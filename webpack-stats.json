@@ -1,0 +1,30 @@
+{
+  "status": "done",
+  "assets": {
+    "css/project.c6f99d89e2cc57ccf130.css": {
+      "name": "css/project.c6f99d89e2cc57ccf130.css",
+      "path": "/app/planet_hse/static/webpack_bundles/css/project.c6f99d89e2cc57ccf130.css",
+      "publicPath": "/static/webpack_bundles/css/project.c6f99d89e2cc57ccf130.css"
+    },
+    "js/project-8ff2e799a1b115522085.js": {
+      "name": "js/project-8ff2e799a1b115522085.js",
+      "path": "/app/planet_hse/static/webpack_bundles/js/project-8ff2e799a1b115522085.js",
+      "publicPath": "/static/webpack_bundles/js/project-8ff2e799a1b115522085.js"
+    },
+    "js/vendors-8ff2e799a1b115522085.js": {
+      "name": "js/vendors-8ff2e799a1b115522085.js",
+      "path": "/app/planet_hse/static/webpack_bundles/js/vendors-8ff2e799a1b115522085.js",
+      "publicPath": "/static/webpack_bundles/js/vendors-8ff2e799a1b115522085.js"
+    }
+  },
+  "chunks": {
+    "project": [
+      "css/project.c6f99d89e2cc57ccf130.css",
+      "js/project-8ff2e799a1b115522085.js"
+    ],
+    "vendors": [
+      "js/vendors-8ff2e799a1b115522085.js"
+    ]
+  },
+  "publicPath": "/static/webpack_bundles/"
+}
