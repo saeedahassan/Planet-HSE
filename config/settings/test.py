@@ -2,7 +2,8 @@
 With these settings, tests run faster.
 """
 
-from .base import *  # noqa
+from .base import *  # noqa: F403
+from .base import TEMPLATES
 from .base import env
 
 # GENERAL
@@ -10,7 +11,7 @@ from .base import env
 # https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
 SECRET_KEY = env(
     "DJANGO_SECRET_KEY",
-    default="7QYzaf0AxS734qa0hhGaoAcPwA3BISZj85HWWHoVPmQdR00XkRqVsaz2BbmOJfQb",
+    default="KlUiujJBinJ8mlenBde3Z2IulEA63lqtgpSktkHbSeEljFpVryidcbQw2MRDCTjp",
 )
 # https://docs.djangoproject.com/en/dev/ref/settings/#test-runner
 TEST_RUNNER = "django.test.runner.DiscoverRunner"
@@ -25,9 +26,16 @@ PASSWORD_HASHERS = ["django.contrib.auth.hashers.MD5PasswordHasher"]
 # https://docs.djangoproject.com/en/dev/ref/settings/#email-backend
 EMAIL_BACKEND = "django.core.mail.backends.locmem.EmailBackend"
 
-# DEBUGING FOR TEMPLATES
+# DEBUGGING FOR TEMPLATES
 # ------------------------------------------------------------------------------
-TEMPLATES[0]["OPTIONS"]["debug"] = True  # type: ignore # noqa F405
+TEMPLATES[0]["OPTIONS"]["debug"] = True  # type: ignore[index]
 
+# MEDIA
+# ------------------------------------------------------------------------------
+# https://docs.djangoproject.com/en/dev/ref/settings/#media-url
+MEDIA_URL = "http://media.testserver/"
+# django-webpack-loader
+# ------------------------------------------------------------------------------
+WEBPACK_LOADER["DEFAULT"]["LOADER_CLASS"] = "webpack_loader.loaders.FakeWebpackLoader"  # noqa: F405
 # Your stuff...
 # ------------------------------------------------------------------------------
